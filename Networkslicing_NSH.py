@@ -48,9 +48,9 @@ sd3 = net.addSwitch('sd3', cls=OVSSwitch, dpid='1000000000000019')	 	#Switch in 
 
 #Chatroom Service on data centers d1, d2 and d3 is implemented by Sidra Hussain
 info('*** Adding data centers\n')
-d1 = net.addDocker('d1', dimage="ubuntu:trusty", ip='172.10.0.1/24', mac='00:00:00:00:00:30', dpid='1000000000000017')	#slice1 datacenter
-d2 = net.addDocker('d2', dimage="ubuntu:trusty", ip='172.10.0.2/24', mac='00:00:00:00:00:40', dpid='1000000000000018')	#slice2 datacenter
-d3 = net.addDocker('d3', dimage="ubuntu:trusty", ip='172.10.0.3/24', mac='00:00:00:00:00:50', dpid='1000000000000019')	#slice3 datacenter
+d1 = net.addDocker('d1', dimage="mariamajid/chatserver:latest", ip='172.10.0.1/24', mac='00:00:00:00:00:30', dpid='1000000000000017')	#slice1 datacenter
+d2 = net.addDocker('d2', dimage="mariamajid/chatserver2:latest", ip='172.10.0.2/24', mac='00:00:00:00:00:40', dpid='1000000000000018')	#slice2 datacenter
+d3 = net.addDocker('d3', dimage="mariamajid/chatserver3:latest", ip='172.10.0.3/24', mac='00:00:00:00:00:50', dpid='1000000000000019')	#slice3 datacenter
 
 #Possible Extension "DHCP service" on Edge Servers e1, e2 & e3 is implemented by Maria Majid 
 info('*** Adding edge networks\n')
