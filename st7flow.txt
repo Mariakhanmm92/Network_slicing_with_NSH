@@ -1,0 +1,4 @@
+table=0,in_port=1,arp,nw_src=172.10.0.0/24,nw_dst=172.10.0.0/24,actions=local,flood,2
+table=0,in_port=2,arp,nw_src=172.10.0.0/24,nw_dst=172.10.0.0/24,actions=local,flood,1
+table=0,in_port=1,dl_dst=00:00:00:00:00:30,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=output:2
+table=0,in_port=2,dl_dst=00:00:00:00:06:01,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=output:1
