@@ -54,9 +54,9 @@ d3 = net.addDocker('d3', dimage="mariamajid/chatserver3:latest", ip='172.10.0.3/
 
 #Possible Extension "DHCP service" on Edge Servers e1, e2 & e3 is implemented by Maria Majid 
 info('*** Adding edge networks\n')
-e1 = net.addDocker('e1', dimage="ubuntu:trusty", ip='172.10.0.20/24', mac='00:00:00:00:00:35', dpid='1000000000000005')	#DHCP server for Access nw 1
-e2 = net.addDocker('e2', dimage="ubuntu:trusty", ip='172.10.0.30/24', mac='00:00:00:00:00:46', dpid='1000000000000011')	#DHCP server for Access nw 2
-e3 = net.addDocker('e3', dimage="ubuntu:trusty", ip='172.10.0.50/24', mac='00:00:00:00:00:55', dpid='1000000000000016')	#DHCP server for Access nw 3
+e1 = net.addDocker('e1', dimage="mariamajid/dhcp1", ip='172.10.0.20/24', mac='00:00:00:00:00:35', dpid='1000000000000005')	#DHCP server for Access nw 1
+e2 = net.addDocker('e2', dimage="mariamajid/dhcp2", ip='172.10.0.30/24', mac='00:00:00:00:00:46', dpid='1000000000000011')	#DHCP server for Access nw 2
+e3 = net.addDocker('e3', dimage="mariamajid/dhcp3", ip='172.10.0.50/24', mac='00:00:00:00:00:55', dpid='1000000000000016')	#DHCP server for Access nw 3
 
 info('*** Adding Edge OvS switches\n')
 sr1 = net.addSwitch('sr1', cls=OVSSwitch, dpid='1000000000000020')		#EdgeSwitch1 linking Access n/w & Edge n/w 1
