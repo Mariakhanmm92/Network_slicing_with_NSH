@@ -1,7 +1,0 @@
-table=0,in_port=1,arp,nw_src=172.10.0.0/24,nw_dst=172.10.0.0/24,actions=local,flood,3
-table=0,in_port=3,arp,nw_src=172.10.0.0/24,nw_dst=172.10.0.0/24,actions=local,flood,1
-table=0,in_port=1,udp,nw_dst=255.255.255.255,udp_dst=67,actions=output:3
-table=0,in_port=1,dl_dst=00:00:00:00:00:30,actions=encap(nsh(md_type=1)),set_field:0x1234->nsh_spi,set_field:0x11223344->nsh_c1,encap(ethernet),set_field:00:00:00:00:00:30->dl_dst,3
-table=0,in_port=1,dl_dst=00:00:00:00:00:46,actions=encap(nsh(md_type=1)),set_field:0x1234->nsh_spi,set_field:0x11223344->nsh_c1,encap(ethernet),set_field:00:00:00:00:00:46->dl_dst,3
-table=0,in_port=3,dl_dst=00:00:00:00:04:01,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=decap(),decap(),1
-

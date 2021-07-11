@@ -1,0 +1,8 @@
+table=0,in_port=1,arp,dl_src=00:00:00:00:04:01,dl_dst=ff:ff:ff:ff:ff:ff,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=local,flood,2
+table=0,in_port=2,arp,dl_src=00:00:00:00:00:30,dl_dst=00:00:00:00:04:01,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=local,flood,1
+table=0,in_port=1,arp,dl_src=00:00:00:00:04:02,dl_dst=ff:ff:ff:ff:ff:ff,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x4321,nsh_c1=0x44332211,actions=local,flood,3
+table=0,in_port=3,arp,dl_src=00:00:00:00:00:50,dl_dst=00:00:00:00:04:02,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x4321,nsh_c1=0x44332211,actions=local,flood,1
+table=0,in_port=1,dl_dst=00:00:00:00:00:30,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=output:2
+table=0,in_port=2,dl_dst=00:00:00:00:04:01,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x1234,nsh_c1=0x11223344,actions=output:1
+table=0,in_port=1,dl_dst=00:00:00:00:00:50,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x4321,nsh_c1=0x44332211,actions=output:3
+table=0,in_port=3,dl_dst=00:00:00:00:04:02,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x4321,nsh_c1=0x44332211,actions=output:1

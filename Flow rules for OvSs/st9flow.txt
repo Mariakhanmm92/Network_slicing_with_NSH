@@ -1,0 +1,4 @@
+table=0,in_port=1,arp,dl_src=00:00:00:00:00:02,dl_dst=ff:ff:ff:ff:ff:ff,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x5678,nsh_c1=0x55667788,actions=local,flood,2
+table=0,in_port=2,arp,dl_src=00:00:00:00:00:40,dl_dst=00:00:00:00:00:02,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x5678,nsh_c1=0x55667788,actions=local,flood,1
+table=0,in_port=1,dl_dst=00:00:00:00:00:40,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x5678,nsh_c1=0x55667788,actions=output:2
+table=0,in_port=2,dl_dst=00:00:00:00:00:02,dl_type=0x894f,nsh_mdtype=1,nsh_spi=0x5678,nsh_c1=0x55667788,actions=output:1
