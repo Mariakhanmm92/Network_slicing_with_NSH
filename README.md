@@ -1,4 +1,4 @@
-# Network_slicing_with_NSH
+# Realization of 5G concept "Network Slicing" using Nework Service Header (NSH)
 
 Network slicing plays an important role for enabling the 5G technology. It primarily provides means
 to use network as a service for the use cases. This technology permits network operators to build 
