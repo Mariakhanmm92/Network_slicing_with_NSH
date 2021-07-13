@@ -36,3 +36,5 @@ OVS to implement OpenFlow protocol for SDN.
 15. After running the file, it will ask to “enter host name” and “enter port”. Give the IP address of d1 (172.10.0.1) in the host name and enter the same port which was provided previously to the d1 (80 in the above scenario). Then, “enter username” of own choice.
 16. A message will appear on the data center d1 “new connection. Username:xyz”. Now, the data center d1 serves as the chatroom and the tenants of slice 1 h11, h21 and h31 will be able to communicate with each other in this chatroom.
 17. Other slices will work on the similar pattern.
+
+Note; To get the complete insight of this project, kindly refer to the project documentation in the Documentation folder.
